@@ -94,16 +94,26 @@ with autoFit:
         param_names = dist_obj.shapes.split(', ') if dist_obj.shapes else []
         names = param_names + ["loc", "scale"]
         
-        table_names = names + ["Mean Squared Error", "Maximum Error"]
-        table_values = float_params + [mse, max_error]
+        parameter_names = names
+        parameter_values = float_params
         
-        result_table = pd.DataFrame({
-            "Name": table_names,
-            "Value": [f"{v:.6f}" for v in table_values]
+        quality_names = ["Mean Squared Error", "Maximum Error"]
+        quality_values = [mse, max_error]
+        
+        parameter_table = pd.DataFrame({
+            "Name": parameter_names,
+            "Value": [f"{v:.6f}" for v in parameter_values]
         })
         
-        st.subheader("Fit Summary")
-        st.table(result_table)
+        quality_table = pd.DataFrame({
+            "Name": quality_names,
+            "Value": [f"{v:.6f}" for v in quality_values]
+        })
+
+        st.subheader("Parameters")
+        st.dataframe(parameter_table, hide_index=True)
+        st.subheader("Quality of the Fit")
+        st.dataframe(quality_table, hide_index=True)
 
 with manualFit:
     
