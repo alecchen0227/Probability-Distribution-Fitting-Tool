@@ -4,8 +4,6 @@ A Streamlit web app that fits probability distributions to a dataset and shows h
 
 Final project for NE 111 at the University of Waterloo (Fall 2025).
 
-![App screenshot](screenshot.png)
-
 ## Features
 
 - **Two ways to load data:** type comma-separated values, or upload a CSV and choose a column
