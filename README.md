@@ -28,8 +28,8 @@ Final project for NE 111 at the University of Waterloo (Fall 2025).
 Requires Python 3.9 or newer.
 
 ```bash
-git clone https://github.com/alecchen0227/NE111_FinalProject.git
-cd NE111_FinalProject
+git clone https://github.com/alecchen0227/Probability-Distribution-Fitting-Tool.git
+cd Probability-Distribution-Fitting-Tool
 pip install -r requirements.txt
 streamlit run Project.py
 ```
